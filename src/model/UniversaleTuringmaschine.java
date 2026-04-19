@@ -1,8 +1,10 @@
+package model;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-public class Universale_turingmaschine {
+public class UniversaleTuringmaschine {
 
     private int currentState = 1;
     private final int endState = 2;
@@ -12,7 +14,7 @@ public class Universale_turingmaschine {
 
     private int calculationCounter = 0;
 
-    public Universale_turingmaschine(String binaryCode){
+    public UniversaleTuringmaschine(String binaryCode){
         String[] transitionFunctions = binaryCode.split("11");
         for (String function : transitionFunctions){
             String[] functionZeros = function.split("1");
@@ -59,7 +61,7 @@ public class Universale_turingmaschine {
     public void printState(){
         System.out.println(band.toString());
         System.out.println("Current State: " + currentState);
-        System.out.println("Current Position in Band: " + band.getCurrentPosition());
+        System.out.println("Current Position in model.Band: " + band.getCurrentPosition());
         System.out.println("Calculations Counter: " + calculationCounter);
     }
 

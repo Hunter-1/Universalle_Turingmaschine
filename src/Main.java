@@ -1,3 +1,5 @@
+import model.UniversaleTuringmaschine;
+
 import java.io.*;
 import java.util.Optional;
 import java.util.Scanner;
@@ -15,7 +17,7 @@ public class Main {
 
         String binaryCode = reader.readLine();
 
-        Universale_turingmaschine UTM = new Universale_turingmaschine(binaryCode);
+        UniversaleTuringmaschine UTM = new UniversaleTuringmaschine(binaryCode);
 
         String input = getInput();
 
