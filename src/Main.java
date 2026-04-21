@@ -31,7 +31,7 @@ public class Main {
                     UTM.printState();
                     System.out.println();
                     UTM.calculateStep();
-                    Thread.sleep(1000);
+                    Thread.sleep(100);
                 }
                 break;
             case 2:
