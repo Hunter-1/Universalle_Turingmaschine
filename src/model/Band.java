@@ -2,11 +2,12 @@ package model;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class Band {
-    private final char[] bandSymbols = {'0','1',' '};
+    private final char[] bandSymbols = {'0','1',' ','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
     private final int[] directions = {-1,1};
-    private final Map<Integer, Character> band = new HashMap<>();
+    private final TreeMap<Integer, Character> band = new TreeMap<>();
     private int currentPosition = 0;
 
     private final int printWidth = 15;
@@ -54,13 +55,15 @@ public class Band {
     }
 
     public String bandContent(){
-        int position = 0;
         StringBuilder builder = new StringBuilder();
-        while (getCharAt(position) != bandSymbols[2]){
-            builder.append(getCharAt(position));
-            position++;
+        int firstPosition = band.firstKey();
+        int lastPosition = band.lastKey();
+        for (int i = firstPosition; i <= lastPosition; i++) {
+            builder.append(getCharAt(i));
         }
-        return builder.toString();
+        String output = builder.toString();
+        output = output.strip();
+        return output;
     }
 
     public int getCurrentPosition(){

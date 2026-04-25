@@ -61,7 +61,7 @@ public class UniversaleTuringmaschine {
     public void printState(){
         System.out.println(band.toString());
         System.out.println("Current State: " + currentState);
-        System.out.println("Current Position in model.Band: " + band.getCurrentPosition());
+        System.out.println("Current Position in Band: " + band.getCurrentPosition());
         System.out.println("Calculations Counter: " + calculationCounter);
     }
 

@@ -1,0 +1,5 @@
+Starts with 2 1s
+Starts with 2 0s
+Squares Unary Number
+Increments binary Number
+Infinite Switch number to 1s then move Right
