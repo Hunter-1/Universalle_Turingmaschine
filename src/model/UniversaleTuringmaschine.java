@@ -59,7 +59,7 @@ public class UniversaleTuringmaschine {
     }
 
     public void printState(){
-        System.out.println(band.toString());
+        System.out.println(band.bandContent());
         System.out.println("Current State: " + currentState);
         System.out.println("Current Position in Band: " + band.getCurrentPosition());
         System.out.println("Calculations Counter: " + calculationCounter);
@@ -91,7 +91,7 @@ public class UniversaleTuringmaschine {
 
     public Optional<String> getResultIfAccepted(){
         if (accepted.isPresent() && accepted.get()) {
-            return Optional.of(band.bandContent());
+            return Optional.of(band.toString());
         } else {
             return Optional.empty();
         }

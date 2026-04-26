@@ -1,7 +1,5 @@
 package model;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.TreeMap;
 
 public class Band {
@@ -41,7 +39,7 @@ public class Band {
         currentPosition += directions[directionPosition-1];
     }
 
-    public String toString(){
+    public String bandContent(){
         int startPosition = currentPosition-printWidth;
         StringBuilder builder = new StringBuilder();
         builder.repeat(" ", printWidth*2);
@@ -54,7 +52,7 @@ public class Band {
         return builder.toString();
     }
 
-    public String bandContent(){
+    public String toString(){
         StringBuilder builder = new StringBuilder();
         int firstPosition = band.firstKey();
         int lastPosition = band.lastKey();
